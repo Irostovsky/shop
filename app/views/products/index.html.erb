@@ -1,0 +1,38 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Created</th>
+    <th>Updated</th>
+    <th>Price buy</th>
+    <th>Price sell</th>
+    <th>Articul</th>
+    <th>Additional info</th>
+    <th>Status</th>
+    <th>Count</th>
+    <th>Shop</th>
+    <th>Category</th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%=h product.created %></td>
+    <td><%=h product.updated %></td>
+    <td><%=h product.price_buy %></td>
+    <td><%=h product.price_sell %></td>
+    <td><%=h product.articul %></td>
+    <td><%=h product.additional_info %></td>
+    <td><%=h product.status %></td>
+    <td><%=h product.count %></td>
+    <td><%=h product.shop_id %></td>
+    <td><%=h product.category_id %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New product', new_product_path %>

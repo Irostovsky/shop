@@ -1,0 +1,52 @@
+<h1>Editing product</h1>
+
+<% form_for(@product) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :created %><br />
+    <%= f.datetime_select :created %>
+  </p>
+  <p>
+    <%= f.label :updated %><br />
+    <%= f.datetime_select :updated %>
+  </p>
+  <p>
+    <%= f.label :price_buy %><br />
+    <%= f.text_field :price_buy %>
+  </p>
+  <p>
+    <%= f.label :price_sell %><br />
+    <%= f.text_field :price_sell %>
+  </p>
+  <p>
+    <%= f.label :articul %><br />
+    <%= f.text_field :articul %>
+  </p>
+  <p>
+    <%= f.label :additional_info %><br />
+    <%= f.text_area :additional_info %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :count %><br />
+    <%= f.text_field :count %>
+  </p>
+  <p>
+    <%= f.label :shop_id %><br />
+    <%= f.text_field :shop_id %>
+  </p>
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @product %> |
+<%= link_to 'Back', products_path %>
