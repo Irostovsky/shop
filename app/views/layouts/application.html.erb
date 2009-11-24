@@ -7,11 +7,16 @@
     <title>Shop</title>
     <%= stylesheet_link_tag 'application.css' %>
   </head>
-  <body>
+  <body class="<%= yield :page_name%>" >
+    <% content_tag :div, :class => 'page_header' do %>
+      <%= link_to '', root_path, :class => 'logo' %>  
+    <% end %>
 
     <p style="color: green"><%= flash[:notice] %></p>
 
-    <%= yield %>
+    <% content_tag :div, :class => 'content' do %>
+      <%= yield %>
+    <% end %>
 
     <%= javascript_include_tag "jquery.js"%>
     <%= javascript_include_tag "application.js"%>

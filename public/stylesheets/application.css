@@ -1,3 +1,7 @@
+body, table, tr, td, th, thead, tbody, h1, h3, form, ul, li {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: #ffffff;
   color: #333333;
@@ -12,12 +16,7 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
-a { color: #000000; }
-a:visited { color: #666666; }
-a:hover {
-  color: #ffffff;
-  background-color: #000000;
-}
+a { color: #5cc0fd; }
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
@@ -49,3 +48,17 @@ a:hover {
   font-size: 12px;
   list-style: square;
 }
+.page_padding { padding: 20px; }
+.page_header {
+  height: 55px;
+  background-color: #d4eefd;
+  padding: 20px;
+}
+.content { padding: 20px; }
+.logo {
+  background-image: url(/images/logo.png);
+  width: 90px;
+  height: 41px;
+  display: block;
+}
+.home_page .content a { display: block; }
