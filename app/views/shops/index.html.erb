@@ -1,22 +1,20 @@
-<h1>Listing shops</h1>
+<%= content_for :page_name, 'shop_list' %>
+
+<h1>Магазины</h1>
+
+<%= link_to 'Добавить магазин', new_shop_path %>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Opened</th>
+    <th class="description">Название</th>
+    <th class="activity">Активный</th>
   </tr>
 
-<% @shops.each do |shop| %>
-  <tr>
-    <td><%=h shop.name %></td>
-    <td><%=h shop.opened %></td>
-    <td><%= link_to 'Show', shop %></td>
-    <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
-    <td><%= link_to 'Destroy', shop, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% @shops.each do |shop| %>
+    <tr>
+      <td><%=link_to shop.name, edit_shop_path(shop) %></td>
+      <td><%= "#{shop.opened ? 'Да' : 'Нет' }" %></td>
+    </tr>
+  <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New shop', new_shop_path %>

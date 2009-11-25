@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091030104624) do
+ActiveRecord::Schema.define(:version => 20091125060529) do
 
   create_table "categories", :force => true do |t|
     t.string "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20091030104624) do
   create_table "shops", :force => true do |t|
     t.string  "name"
     t.boolean "opened", :default => true
+    t.boolean "hidden"
   end
 
 end

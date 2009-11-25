@@ -12,9 +12,9 @@
       <%= link_to '', root_path, :class => 'logo' %>  
     <% end %>
 
-    <p style="color: green"><%= flash[:notice] %></p>
 
     <% content_tag :div, :class => 'content' do %>
+      <%= content_tag :div, flash[:notice], :class => 'notice' %>
       <%= yield %>
     <% end %>
 

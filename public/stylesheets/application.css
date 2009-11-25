@@ -11,6 +11,10 @@ body, p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
 pre {
   background-color: #eeeeee;
   padding: 10px;
@@ -61,4 +65,22 @@ a { color: #5cc0fd; }
   height: 41px;
   display: block;
 }
+.notice { color: green; }
+table {
+  margin: 10px 0;
+  border-collapse: collapse;
+}
+table tr td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+}
+table tr th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+}
+table tr th { background-color: #ececec; }
 .home_page .content a { display: block; }
+.shop_list table .description { width: 200px; }
+.shop_list table .activity { width: 50px; }
