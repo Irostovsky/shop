@@ -1,0 +1,7 @@
+<% content_tag :div, :class => 'form_field' do %>
+  <%= content_tag :div, label, :class => 'field_label' %>
+  <% content_tag :div, :class => 'field' do %>
+    <%= yield %>
+  <% end %>
+  <%= content_tag :div, '', :class => 'reset_float' %>
+<% end %>

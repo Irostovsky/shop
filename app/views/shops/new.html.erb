@@ -1,19 +1,19 @@
+<%= content_for :page_name, 'new_shop' %>
 <h1>New shop</h1>
 
 <% form_for(@shop) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
+  <% render :layout => '/layouts/form_field', :locals => {:label => 'Название' } do %>
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :opened %><br />
+  <% end %>  
+  <% render :layout => '/layouts/form_field', :locals => {:label => 'Активный' } do %>
     <%= f.check_box :opened %>
-  </p>
+  <% end %>  
+
   <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', shops_path %>
+<%= link_to 'Магазины', shops_path %>

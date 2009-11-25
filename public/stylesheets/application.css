@@ -81,6 +81,18 @@ table tr th {
   padding: 5px;
 }
 table tr th { background-color: #ececec; }
+.form_field {
+  width: 350px;
+  margin-bottom: 10px;
+}
+.form_field .field_label {
+  width: 100px;
+  text-align: right;
+  float: left;
+  margin-right: 10px;
+}
+.form_field .field { float: left; }
+.reset_float { clear: both; }
 .home_page .content a { display: block; }
 .shop_list table .description { width: 200px; }
 .shop_list table .activity { width: 50px; }
